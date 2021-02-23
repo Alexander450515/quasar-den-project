@@ -18,6 +18,7 @@
       :breakpoint="0"
       bordered
       content-class="bg-grey-3"
+      class="text-grey-8"
     >
       <q-list padding>
         <EssentialLink
@@ -28,7 +29,7 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="bg-secondary">
       <router-view />
     </q-page-container>
   </q-layout>

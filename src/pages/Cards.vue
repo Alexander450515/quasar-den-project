@@ -1,6 +1,6 @@
 <template>
-  <q-page class="flex flex-center">
-    <img alt="Quasar logo" src="~assets/quasar-logo-full.svg" />
+  <q-page class="flex">
+    <h2 class="q-mx-auto">Карты стоматологических пациентов</h2>
   </q-page>
 </template>
 
