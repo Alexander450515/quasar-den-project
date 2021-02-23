@@ -15,7 +15,7 @@
       @mouseout="miniState = true"
       mini-to-overlay
       :width="200"
-      :breakpoint="500"
+      :breakpoint="0"
       bordered
       content-class="bg-grey-3"
     >
