@@ -1,11 +1,11 @@
 <template>
   <q-layout view="hHh Lpr lff">
-    <q-header elevated class="bg-black">
+    <!-- <q-header elevated class="bg-black">
       <q-toolbar>
         <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
         <q-toolbar-title>Header</q-toolbar-title>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
 
     <q-drawer
       v-model="drawer"
@@ -19,19 +19,13 @@
       bordered
       content-class="bg-grey-3"
     >
-      <q-scroll-area class="fit">
-        <q-list padding>
-          <q-item clickable v-ripple>
-            <q-item-section avatar>
-              <q-icon name="inbox" />
-            </q-item-section>
-
-            <q-item-section>
-              Inbox
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </q-scroll-area>
+      <q-list padding>
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
+      </q-list>
     </q-drawer>
 
     <q-page-container>
@@ -41,26 +35,39 @@
 </template>
 
 <script>
-// import EssentialLink from "components/EssentialLink.vue";
-
-const linksData = [
-  {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev"
-  }
-];
+import EssentialLink from "components/EssentialLink.vue";
 
 export default {
   name: "MainLayout",
   components: {
-    //  EssentialLink
+    EssentialLink
   },
   data() {
     return {
       drawer: false,
-      miniState: true
+      miniState: true,
+      essentialLinks: [
+        {
+          title: "Картотека",
+          icon: "folder",
+          link: "/"
+        },
+        {
+          title: "Пациенты",
+          icon: "people",
+          link: "/patients"
+        },
+        {
+          title: "Прайс",
+          icon: "monetization_on",
+          link: "/price"
+        },
+        {
+          title: "Шаблоны",
+          icon: "fact_check",
+          link: "/template"
+        }
+      ]
     };
   }
 };
