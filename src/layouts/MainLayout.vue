@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh Lpr lff">
+  <q-layout view="hHh lpR fFf">
     <!-- <q-header elevated class="bg-black">
       <q-toolbar>
         <q-btn flat @click="drawer = !drawer" round dense icon="menu" />
@@ -8,7 +8,6 @@
     </q-header> -->
 
     <q-drawer
-      v-model="drawer"
       show-if-above
       :mini="miniState"
       @mouseover="miniState = false"
