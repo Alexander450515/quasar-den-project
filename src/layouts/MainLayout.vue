@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import EssentialLink from "components/EssentialLink.vue";
+import EssentialLink from "components/NavDrawer/EssentialLink.vue";
 
 export default {
   name: "MainLayout",

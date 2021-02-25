@@ -7,24 +7,29 @@
       row-key="name"
       :rows-per-page-options="[10, 20, 50]"
       flat
-      @row-dblclick="openPatientCard"
+      @row-click="openPatientCard"
+      separator="cell"
     />
+    <q-dialog v-model="card">
+      <Card />
+    </q-dialog>
   </q-page>
 </template>
 
 <script>
+import Card from "components/Cards/Card.vue";
 export default {
   name: "Cards",
+  components: { Card },
   data() {
     return {
+      card: false,
       columns: [
         {
           name: "cardNumber",
           label: "Номер карты",
           align: "center",
           field: "cardNumber",
-          format: val => `${val}`,
-          required: true,
           sortable: true,
           style: "width: 200px"
         },
@@ -66,9 +71,10 @@ export default {
   },
   methods: {
     openPatientCard(evt, row, index) {
-      console.log(evt, row, index);
+      this.card = true;
+      // console.log(evt, row, index);
       // this.$store.dispatch("selectedPatient", row.cardNumber);
-      this.$router.push("/patients");
+      // this.$router.push("/patients");
     }
   }
 };
