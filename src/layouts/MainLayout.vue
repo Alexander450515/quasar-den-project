@@ -58,6 +58,11 @@ export default {
           link: "/patients"
         },
         {
+          title: "Приемы",
+          icon: "date_range",
+          link: "/reception"
+        },
+        {
           title: "Прайс",
           icon: "monetization_on",
           link: "/price"
