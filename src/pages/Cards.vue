@@ -1,6 +1,6 @@
 <template>
   <q-page class="fit column inline content-center">
-    <h4 class="q-mx-auto">Карты стоматологических пациентов</h4>
+    <h4 class="title">Карты стоматологических пациентов</h4>
     <q-table
       :data="data"
       :columns="columns"
@@ -9,7 +9,16 @@
       flat
       @row-click="openPatientCard"
       separator="cell"
+      bordered
+      table-style="height: 40em"
+      table-class="table"
     />
+
+    <q-btn-group push outline class="q-mt-md justify-end">
+      <q-btn label="Создать" dense no-caps color="grey-9" class="q-px-sm" />
+      <q-btn label="Найти" dense no-caps class="q-px-sm" />
+    </q-btn-group>
+
     <q-dialog v-model="card">
       <Card />
     </q-dialog>
@@ -31,7 +40,7 @@ export default {
           align: "center",
           field: "cardNumber",
           sortable: true,
-          style: "width: 200px"
+          style: "width: 300px"
         },
         {
           name: "FIO",
@@ -39,7 +48,7 @@ export default {
           label: "ФИО",
           field: "FIO",
           sortable: true,
-          style: "width: 350px"
+          style: "width: 450px"
         },
         {
           name: "doctor",
@@ -47,7 +56,7 @@ export default {
           align: "center",
           field: "doctor",
           sortable: true,
-          style: "width:300px"
+          style: "width:400px"
         }
       ],
       data: [
@@ -80,8 +89,21 @@ export default {
 };
 </script>
 
-<style>
-/* .q-table {
-  width: 1000px;
-} */
+<style lang="sass" scoped>
+.title
+  font-family: Adamina font-size 36px
+  line-height: 25px
+  text-align: center
+  color: #858b8b
+
+.q-btn
+  background-color: white
+  font-family: Roboto
+
+.table
+  background-color: white
+  font-family: Adamina
+  font-weight: 400
+  border-collapse: collapse
+  width: 100%
 </style>

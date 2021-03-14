@@ -36,7 +36,7 @@
     </q-card-section>
 
     <q-card-section>
-      <table>
+      <table class="table">
         <th colspan="2">{card.typeOfDisease}</th>
         <tr>
           <td class="left-column">Дата</td>
@@ -126,7 +126,7 @@ export default {
   font-family: Roboto
 
 
-table
+.table
   background-color: white
   font-family: Adamina
   font-weight: 400

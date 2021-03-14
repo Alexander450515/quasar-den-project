@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import state from "./modules/state";
+// import state from "./modules/state";
+import patients from "./modules/patients";
 
 Vue.use(Vuex);
 
@@ -17,7 +18,8 @@ Vue.use(Vuex);
 export default function(/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
-      state
+      // state,
+      patients
     },
 
     // enable strict mode (adds overhead!)
