@@ -7,7 +7,9 @@ const state = {
       gender: "Мужской",
       age: "25",
       phone: "89998887766",
-      doctor: "Доктор Доктор Доктор"
+      doctor: "Доктор Доктор Доктор",
+      adress: "Пушкина, д 1, кв 15",
+      profession: "Юрист"
     },
     {
       serialNumber: 2,
@@ -16,7 +18,9 @@ const state = {
       gender: "Мужской",
       age: "51",
       phone: "89998883422",
-      doctor: "Адоктор Доктор Доктор"
+      doctor: "Адоктор Доктор Доктор",
+      adress: "Советская, д 3, кв 43",
+      profession: "Программист"
     },
     {
       serialNumber: 3,
@@ -25,7 +29,9 @@ const state = {
       gender: "Мужской",
       age: "22",
       phone: "89998881234",
-      doctor: "Бдоктор Доктор Доктор"
+      doctor: "Бдоктор Доктор Доктор",
+      adress: "Победа, д 5, кв 51",
+      profession: "Банкир"
     }
   ]
 };
